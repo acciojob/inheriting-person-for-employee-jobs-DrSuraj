@@ -28,3 +28,11 @@ person.greet();
 
 const employee = new Employee("Bob", 30, "Manager");
 employee.jobGreet();
+
+
+// test.spec.js
+
+import { Person, Employee } from '../../path/to/script.js'; // Adjust the path accordingly
+
+// Your Cypress test code here
+
