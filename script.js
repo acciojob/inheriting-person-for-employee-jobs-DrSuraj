@@ -1,4 +1,4 @@
-// Define the Person class
+// Define the Person class in one file
 class Person {
   constructor(name, age) {
     this.name = name;
@@ -10,7 +10,11 @@ class Person {
   }
 }
 
-// Define the Employee class inheriting from Person
+// Import the Person class in another file
+// If you're using modules, ensure proper import/export syntax
+// Example: import { Person } from './person.js';
+
+// Define the Employee class in the same file where Person is imported or defined
 class Employee extends Person {
   constructor(name, age, jobTitle) {
     super(name, age);
