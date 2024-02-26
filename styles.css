@@ -1,2 +1,15 @@
 /*  your css code here. If applicable */
 /* Stylesheet can be customized based on requirements */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#output {
+    margin-top: 20px;
+}

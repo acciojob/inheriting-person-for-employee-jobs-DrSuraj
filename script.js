@@ -1,34 +1,47 @@
-// Define the Person class in one file
+// Define the Person class
 class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 
-  greet() {
-    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
-  }
+    // Method to greet
+    greet() {
+        const message = `Hello, my name is ${this.name}, I am ${this.age} years old.`;
+        displayMessage(message);
+    }
 }
 
-// Import the Person class in another file
-// If you're using modules, ensure proper import/export syntax
-// Example: import { Person } from './person.js';
-
-// Define the Employee class in the same file where Person is imported or defined
+// Define the Employee class, inheriting from Person
 class Employee extends Person {
-  constructor(name, age, jobTitle) {
-    super(name, age);
-    this.jobTitle = jobTitle;
-  }
+    constructor(name, age, jobTitle) {
+        // Call the constructor of the parent class (Person)
+        super(name, age);
+        this.jobTitle = jobTitle;
+    }
 
-  jobGreet() {
-    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
-  }
+    // Method to greet including job title
+    jobGreet() {
+        const message = `Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`;
+        displayMessage(message);
+    }
 }
 
-// Test the classes
-const alice = new Person("Alice", 25);
-alice.greet(); // Output: Hello, my name is Alice, I am 25 years old.
+// Function to display messages on the webpage
+function displayMessage(message) {
+    const outputDiv = document.getElementById('output');
+    const paragraph = document.createElement('p');
+    paragraph.textContent = message;
+    outputDiv.appendChild(paragraph);
+}
 
+// Example test case
+// Creating an instance of Person
+const alice = new Person("Alice", 25);
+// Calling greet method of Person
+alice.greet();
+
+// Creating an instance of Employee
 const bob = new Employee("Bob", 30, "Manager");
-bob.jobGreet(); // Output: Hello, my name is Bob, I am 30 years old, and my job title is Manager.
+// Calling jobGreet method of Employee
+bob.jobGreet();
