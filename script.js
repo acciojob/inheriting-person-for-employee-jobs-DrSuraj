@@ -1,5 +1,5 @@
 // Define the Person class
-class Person {
+export class Person {
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -13,7 +13,7 @@ class Person {
 }
 
 // Define the Employee class, inheriting from Person
-class Employee extends Person {
+export class Employee extends Person {
     constructor(name, age, jobTitle) {
         // Call the constructor of the parent class (Person)
         super(name, age);
